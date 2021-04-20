@@ -1,63 +1,62 @@
 # Dojo React - Product cart
 
-Ce dojo est l'occasion parfaite de pratiquer l'affichage de listes, la gestion du state, des formulaires et des évènements !
+This dojo is the perfect opportunity to practice listing, state management, forms, and events!
 
-Pour commencer, clonez ce dépot et placez-vous à l'interieur du dossier coresspondant.
+To start, clone this repository and set your current directory inside the correspondent folder.
 
-## Lancer l'application
+## Launch the application
 
 ```sh
 $ npm install && npm start
 ```
 
-## Objectif
+## Objective
 
-Le but général est de créer une petite application React permettant de gérer un panier de produits.
+The overall goal is to create a small React application to manage a basket of products.
 
-![Screenshot de l'application finale](https://i.imgur.com/TRUaDKk.png)
+![Final Application Screenshot](https://i.imgur.com/TRUaDKk.png)
 
-Jettez un oeil à `App.css` afin d'utiliser **uniquement** les classes existantes pour styliser l'application *a minima*. 
+Take a look at 'App.css' to use **only** existing classes to style the  application,
 
-Conseil : *Comme d'habitude*, gardez bien votre console ouverte pendant le développement, pour ne pas laisser passer de warning ou d'erreur quelconque :)
+Tip: *As usual*, keep your console open during development, so you don’t miss any warning or error:)
 
-## Instructions pour le dojo
+## Dojo Instructions
 
-### Etape 1 : Afficher les produits dans un tableau
+### Step
 
-Dans `App.js` vous avez quelques exemples de produits dans la constante `initialProductList`.
+In App.js you have a few examples of products in the initialProductList constant.
 
-Il faut afficher ces 3 produits dans un tableau qui possèdera les colonnes  : 
-- 'Produit' (`name`)
-- 'Prix unitaire' (`price`)
-- 'Quantité' (`quantity`)
-- 'Prix total' (`price * quantity`)
+You must display these 3 products in a table that will have the columns:
+- 'Product' (`name')
+- 'Unit price' (`price')
+- 'Quantity' (`quantity')
+- 'Total price' ('price * quantity)
 
-### Etape 2 : Permettre de changer la quantité d'un produit dans la liste 
+#### Step 2: Change the quantity of a product in the list
 
-Dans le tableau, la colonne 'Quantité' ne devrait contenir que des `<input>` (pensez au bon type d'input, avec des contraintes cohérentes comme on parle d'une quantité) : 
-- Ces inputs doivent êtres **controllés par React**. 
-- Les données des produits devront être gérées dans le `state`.
-- Le prix total de l'item devrait se mettre à jour automatiquement à l'édition d'une quantité pour un item de la commande.
+In the table, the 'Quantity' column should contain only `input>' (think of the right type of input, with consistent constraints such as quantity):
+- These inputs must be **controlled by React**.
+- Product data will need to be managed in the state.
+- The total price of the item should update automatically
 
-## Pour approfondir (étapes bonus)
+## To deepen (bonus steps)
 
-### Etape 3 : Afficher le total de la commande
+#### Step 3: View Order Total
 
-En dessous du tableau, affichez le montant total du panier, qui se calcule en faisant la somme des prix totaux (prix * quantité) des items du panier.
+Below the table, display the total amount of the basket, which is calculated by summing the total prices (price * quantity) of the items in the basket.
 
-Conseil : Vous pouvez utiliser [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce).
+Tip: You can use [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce).
 
-### Etape 4 : Suppression d'un produit de la liste
+### Step 4: Remove a product from the list
 
-Dès que l'on renseigne une quantité de 0, une pop-up `window.confirm` apparait pour demander à l'utilisateur "Etes-vous sûr de bien vouloir retirer ce produit de la liste ?" : 
-- S'il confirme, on le fait (sans blague !).
-- Sinon sa saisie de quantité (0) est annulée (rien ne se passe, la quantité n'est pas mise à jour).
+As soon as a quantity of 0 is entered, a 'window.confirm' pop-up appears asking the user "Are you sure you want to remove this product from the list?":
+- If he confirms, we do (no kidding!).
+- Otherwise, its quantity entry (0) is canceled (nothing happens, the quantity is not updated).
 
-### Etape 5 : Ajout d'un produit dans la liste
+#### Step 5: Adding a product to the list
 
-Creez un formulaire pour ajouter un produit : 
-- Ce dernier contiendra deux champs : 'Nom' et 'Prix', ainsi qu'un bouton 'Ajouter'.
-- Dès que l'on souhaite ajouter un produit, il faut s'assurer que le nom est bien présent et que la quantité a une valeur cohérente  (pensez aux contraintes d'input HTML5 !).
-- Par défaut, un nouveau produit dans la liste aura une quantité de 1.
-- Un nouveau produit devra posséder un identifiant (`id`) généré aléatoirement au moment de la création.
-
+Create a form to add a product:
+- This will contain two fields: 'Name' and 'Price', and an 'Add' button.
+- As soon as you want to add a product, you must ensure that the name is present and that the quantity has a consistent value (think of the HTML5 input constraints!).
+- By default, a new product in the list will have a quantity of 1.
+- A new product must have a randomly generated identifier ('id') at the time of creation.

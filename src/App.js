@@ -10,7 +10,7 @@ const initialProductList = [
 function App () {
   return (
     <div className='App'>
-      <h1>Ma commande</h1>
+      <h1>My order</h1>
     </div>
   );
 }
